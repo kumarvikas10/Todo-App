@@ -1,7 +1,8 @@
 import React from "react";
+import { useState } from "react";
 
 function TodoForm({ addTodo }) {
-    const [value, setValue] = React.useState("");
+    const [value, setValue] = useState("");
   
     const handleSubmit = e => {
       e.preventDefault();
@@ -18,7 +19,7 @@ function TodoForm({ addTodo }) {
           value={value}
           onChange={e => setValue(e.target.value)}
         />
-        <button className="submitbtn" onClick={() => handleSubmit}>Add Todo Item</button>
+        <button className="submitbtn" onClick={() => handleSubmit}>Add Todo<i class="fa-solid fa-list"></i></button>
       </form>
     );
   }
